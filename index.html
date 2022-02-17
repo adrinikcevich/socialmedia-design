@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MySocial</title>
+        <link rel="icon" href="logo.png">
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@800&family=Barlow:wght@900&family=Bebas+Neue&family=Comfortaa:wght@300;500;700&family=Cuprum:wght@500&family=Dongle:wght@300&family=Major+Mono+Display&family=Montserrat+Alternates:ital@0;1&family=Mulish&family=Nunito:wght@700&family=Pacifico&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:wght@100;300;400&family=Tajawal:wght@200;300&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+        <!-- ICONS -->
+        <script src="https://kit.fontawesome.com/66abc61ad9.js" crossorigin="anonymous"></script>
+
+        <!-- STYLES -->
+        <link href="css/index.css" rel="stylesheet">
+
+        <!-- LUXON -->
+        <script src="js/luxon.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="logo-container">
+                    <h1 class="my">My</h1>
+                    <h1 class="social">Social</h1>
+                </div>
+                <form>
+                    <i class="fas fa-search header-searchIcon"></i>
+                    <input type="search" placeholder="Search" class="search-bar">
+                </form>
+                <nav class="navigation">
+                    <ul>
+                        <li class="nav-link-container"><span class="nav-link iconify" data-icon="clarity:home-solid"></span></li>
+                        <li class="nav-link-container"><span class="nav-link iconify" data-icon="clarity:user-solid"></span></li>
+                        <li class="nav-link-container notifIcon"><span class="nav-link iconify" data-icon="clarity:notification-solid"></span></li>
+                        <li class="nav-link-container settingsIcon"><span class="nav-link iconify" data-icon="clarity:settings-solid"></span></li>
+                        
+                    </ul>
+                </nav>
+                <div class="responsive-link">
+                    <span class="iconify" data-icon="ant-design:menu-outlined"></span>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="container">
+            <main>
+                <div class="new-post-container">
+                    <button Class="add-post-button">
+                        New Post
+                        <div class="sort-icon-container">
+                            <i class="fas fa-sort"></i>
+                        </div>
+                    </button>
+                    <form class="new-post-form formAnimationHandle" >
+                        <div class="form-txtarea-container">
+                            <textarea maxlength="240" spellcheck="disable" placeholder="Description..." id="new-post-textarea"></textarea>
+                        </div>
+
+                        <div class="new-post-form-buttons">
+                            <label for="upload-photo" class="label-for-photo">
+                                Add Photo
+                                <span class="upload-photo-icon iconify" data-icon="clarity:image-solid"></span>
+                                
+                            </label>
+                            <input type="file" id="upload-photo" name="upload-photo" accept="image/*">
+
+                        <button type="submit" class="post-button">Post</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="allposts-container">
+                    <div class="comingposts-container">
+                    </div>
+                </div>
+            </main>
+            <aside class="aside">
+                <div class="aside-elements">
+                    <div class="friends-container">
+                        <div class="friends-filters">
+                            <h2>Friends</h2>
+                            <div class="friends-searchbar">
+                                <i class="fas fa-search friends-searchIcon"></i>
+                                <input type="text" class="friends-searchbar-input">
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="online" id="online">
+                                <label for="online">Online</label>
+                            </div>
+                        </div>
+                        <div class="nofriendsfound-box disabled">
+                            <h3>No results found</h3>
+                        </div>
+                        <div class="friend-box">
+                            <img class="friend-pfp" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuyms3C5U_OrPuPQhv9WF-McOoTq5SLNPGfg&usqp=CAU">
+                            <div class="friend-info-container">
+                                <h3 class="friend-username">Juan</h3>
+                                <span class="friend-status">Online</span>
+                            </div>
+                            <div class="friend-statusCircle online"></div>
+                        </div>
+                        <div class="friend-box">
+                            <img class="friend-pfp" src="https://i.pinimg.com/550x/72/df/30/72df30b8b200848e492625ef95dd2e50.jpg">
+                            <div class="friend-info-container">
+                                <h3 class="friend-username">Michael</h3>
+                                <span class="friend-status offline">Offline</span>
+                            </div>
+                            <div class="friend-statusCircle"></div>
+                        </div>
+                        <div class="friend-box">
+                            <img class="friend-pfp" src="https://1.bp.blogspot.com/-D1fbrXxno40/YPr1rgcbO3I/AAAAAAAAF1A/Xa-h8CXQVL0yQGmW1EUXNhpkEtm_QmqVgCLcBGAsYHQ/w640-h640/Screenshot_20210723-175141_1.png">
+                            <div class="friend-info-container">
+                                <h3 class="friend-username">María</h3>
+                                <span class="friend-status offline">Offline</span>
+                            </div>
+                            <div class="friend-statusCircle"></div>
+                        </div>
+                        <div class="friend-box">
+                            <img class="friend-pfp" src="https://imagenes.elpais.com/resizer/D1eYUUEfyOIXlXnix3cXUCSGZF8=/980x735/filters:focal(1745x609:1755x619)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/7G364PMCSFGIHFZNHHJLNQL4SU.jpg">
+                            <div class="friend-info-container">
+                                <h3 class="friend-username">Mati</h3>
+                                <span class="friend-status offline">Offline</span>
+                            </div>
+                            <div class="friend-statusCircle"></div>
+                        </div>
+                    </div>
+                    <div class="groups-container">
+                        
+                        <div class="groups-filters">
+                            <h2>Groups</h2>
+                            <span class="iconify add-group-btn" data-icon="akar-icons:plus"></span>
+                        </div>
+
+                        <div class="group-box">
+                            <h2 class="group-title">Vacations 2022</h2>
+                            <img class="group-pfp" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMlRWjSNpvawSRc8lp9zZ97t2CadweumwpAQ&usqp=CAU">
+                        </div>
+                        <div class="group-box">
+                            <h2 class="group-title">Football</h2>
+                            <img class="group-pfp" src="https://as.com/ocio/imagenes/2016/06/16/conectados/1466068176_375963_1466068365_noticia_normal.jpg">
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+
+
+        <script src="js/index.js" type="module"></script>
+    </body>
+</html>
